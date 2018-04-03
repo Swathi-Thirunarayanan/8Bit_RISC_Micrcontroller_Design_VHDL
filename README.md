@@ -51,7 +51,7 @@ Op1	Op2	Rd	Rs
 above, and it is followed by an 8-bit constant or immediate value:	
 										
 	Op1		Op2	Rd	Rs	Immediate		
-	2			2	2	2		8		
+	2		2	2	2	8		
 •  These two-byte	instructions	are	identified	by a 1	in the most-significant bit in the instruction, i.e. op1
 = 1X.								
 •  With 4 operation bits, there are 16 instructions:	
