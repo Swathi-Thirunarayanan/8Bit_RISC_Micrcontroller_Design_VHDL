@@ -56,35 +56,35 @@ above, and it is followed by an 8-bit constant or immediate value:
 = 1X.								
 •  With 4 operation bits, there are 16 instructions:	
 
-op1			op2				Mnemonic		Purpose
+	op1			op2				Mnemonic		Purpose
 
-00			00				AND Rd, Rs		Rd = Rd AND Rs
+	00			00				AND Rd, Rs		Rd = Rd AND Rs
 
-00			01				OR Rd, Rs		Rd = Rd OR Rs
+	00			01				OR Rd, Rs		Rd = Rd OR Rs
 
-00			10				ADD Rd, Rs		Rd = Rd + Rs
+	00			10				ADD Rd, Rs		Rd = Rd + Rs
 
-00			11				SUB Rd, Rs		Rd = Rd - Rs
+	00			11				SUB Rd, Rs		Rd = Rd - Rs
 
-01			00				LW Rd, (Rs)		Rd = Mem[Rs]
+	01			00				LW Rd, (Rs)		Rd = Mem[Rs]
 
-01			01				SW Rd, (Rs)		Mem[Rs] = Rd
+	01			01				SW Rd, (Rs)		Mem[Rs] = Rd
 
-01			10				MOV Rd, Rs		Rd = Rs
+	01			10				MOV Rd, Rs		Rd = Rs
 
-01			11				NOP				Do nothing
+	01			11				NOP			Do nothing
 
-10			00				JEQ Rd, immed	PC = immed if Rd == 0
+	10			00				JEQ Rd, immed	 	PC = immed if Rd == 0
 
-10			01				JNE Rd, immed	PC = immed if Rd != 0
+	10			01				JNE Rd, immed		PC = immed if Rd != 0
 
-10			10				JGT Rd, immed	PC = immed if Rd > 0
+	10			10				JGT Rd, immed		PC = immed if Rd > 0
 
-10			11				JLT Rd, immed	PC = immed if Rd < 0
+	10			11				JLT Rd, immed		PC = immed if Rd < 0
 
-11			00				LW Rd, immed	Rd = Mem[immed]
+	11			00				LW Rd, immed		Rd = Mem[immed]
 
-11			01				SW Rd, immed	Mem[immed] = Rd
+	11			01				SW Rd, immed		Mem[immed] = Rd
 
 •	Note the regularity of the ALU operations and the jump operations: we can feed the op2 bits directly into the ALU, and use op2 to control the branch decision.
 
